@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+  <!-- menu desplegable -->
+  <ion-menu contentId="menu-content" side="start" menuId="first">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+  <ion-menu-toggle auto-hide="true">
+    <ion-item routerLink="/main" routerDirection="root">
+      Main
+    </ion-item>
+  </ion-menu-toggle>
+
+  <ion-menu-toggle auto-hide="true">
+    <ion-item routerLink="/productos" routerDirection="root">
+      Productos
+    </ion-item>
+  </ion-menu-toggle>
+</ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- página principal -->
+
+<ion-router-outlet id="menu-content"></ion-router-outlet> </ion-app>
